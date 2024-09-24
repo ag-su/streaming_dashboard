@@ -1,8 +1,7 @@
 from flask import Flask, render_template, request, jsonify  
 import dash
 from dashboard.component import load_component
-from callbacks import *
-import os 
+from callbacks import register_callbacks
 from dashboard import create_app
 
 
@@ -29,4 +28,4 @@ register_callbacks(dash_app1)
 # 서버 실행
 if __name__ == '__main__':
     app.debug = True 
-    app.run('0.0.0.0', port=80) 
+    app.run()
